@@ -56,7 +56,7 @@ function getAllKinds(animals) {
   return kindsOfAnimals;
 }
 
-console.log(getAllKinds(animals));
+// console.log(getAllKinds(animals));
 
 /**
  * FUNCTION DESCRIPTION
@@ -75,7 +75,15 @@ console.log(getAllKinds(animals));
   ];
  * filterByCountMinimum([], 3); //> [] // returns empty array if input array is empty
  */
-function filterByCountMinimum(animals, minimum) {}
+function filterByCountMinimum(animals, minimum) {
+  let greaterThanMin = [];
+  for(let i=0; i<animals.length; i++){
+    if(animals[i].count >= minium){
+      greaterThanMin.push(animals[i]);
+    };
+  }
+  return greaterThanMin;
+}
 
 /**
  * FUNCTION DESCRIPTION
