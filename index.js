@@ -32,9 +32,9 @@ function getTotalCount(animals) {
     totalAnimalCount += animals[i].count;
   }
   return totalAnimalCount;
-}
+};
 
-console.log(getTotalCount(animals));
+// console.log(getTotalCount(animals));
 
 /**
  * FUNCTION DESCRIPTION
@@ -48,7 +48,15 @@ console.log(getTotalCount(animals));
  * getAllKinds(animals); //> ["Pig", "Cow", "Chicken", "Horse", "Dog", "Cat"]
  * getAllKinds([]); //> [] // returns empty array if input array is empty
  */
-function getAllKinds(animals) {}
+function getAllKinds(animals) {
+  let kindsOfAnimals = [];
+  for(let i=0; i<animals.length; i++){
+    kindsOfAnimals.push(animals[i].kind);
+  };
+  return kindsOfAnimals;
+}
+
+console.log(getAllKinds(animals));
 
 /**
  * FUNCTION DESCRIPTION
