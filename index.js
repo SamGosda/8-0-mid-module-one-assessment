@@ -113,7 +113,7 @@ function getMostCommonAnimal(animals) {
   }
 }
 
-console.log(getMostCommonAnimal(animals));
+// console.log(getMostCommonAnimal(animals));
 
 // Do not change anything below this line.
 module.exports = {
