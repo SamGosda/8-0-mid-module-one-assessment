@@ -85,6 +85,8 @@ function filterByCountMinimum(animals, minimum) {
   return greaterThanMin;
 }
 
+// console.log(filterByCountMinimum(animals));
+
 /**
  * FUNCTION DESCRIPTION
  * ------------------
@@ -98,14 +100,20 @@ function filterByCountMinimum(animals, minimum) {
  * getMostCommonAnimal([]); //> null // returns null if the input is empty
  */
 function getMostCommonAnimal(animals) {
-  let mostCommonAnimal = animals[0];
-  for(let i=1; i<animals.length; i++){
-    if(animals[i].count > mostCommonAnimal){
-      mostCommonAnimal = animals[i];
+  if(animals.length === 0){
+    return null
+  }else{
+    let mostCommonAnimal = animals[0];
+    for(let i=1; i<animals.length; i++){
+      if(animals[i].count > mostCommonAnimal.count){
+        mostCommonAnimal = animals[i];
+      }
     }
+    return mostCommonAnimal
   }
-  return mostCommonAnimal
 }
+
+console.log(getMostCommonAnimal(animals));
 
 // Do not change anything below this line.
 module.exports = {
